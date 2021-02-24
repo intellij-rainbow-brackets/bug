@@ -1,6 +1,6 @@
 name: delete comments from open-collective-bot
 on:
-  workflow_dispatch:
+  [workflow_dispatch]
 jobs:
   delete-comments:
     runs-on: ubuntu-latest
@@ -10,3 +10,4 @@ jobs:
       - uses: izhangzhihao/delete-comment@v0.0.1
         with: 
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          delete_user_name: open-collective-bot[bot]
